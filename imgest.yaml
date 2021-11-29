@@ -91,7 +91,7 @@ implementation:
           # Get dataset.
           query_job = client.query(
               f"""
-              SELECT * FROM {bigquery_table_id}
+              SELECT * FROM `{bigquery_table_id}`
               """
           )
           table = query_job.result(max_results=bigquery_max_rows)
